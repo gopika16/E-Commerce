@@ -2,7 +2,7 @@ import { Fragment, useState } from 'react'
 import { Dialog, Disclosure, Menu, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, FunnelIcon, MinusIcon, PlusIcon, Squares2X2Icon } from '@heroicons/react/20/solid'
-import { mens_kurta } from '../../Data/Men/men_kurta'
+import { men_kurta } from '../../Data/Men/men_kurta'
 import ProductCard from './ProductCard'
 
 const sortOptions = [
@@ -294,7 +294,7 @@ export default function Product() {
               {/* Product grid */}
               <div className="lg:col-span-4 w-full">
                 <div className='flex flex-wrap justify-center bg-white py-5'>
-                {mens_kurta.map((item) => <ProductCard product={item}/>)}
+                {men_kurta.map((item) => <ProductCard product={item}/>)}
                 </div>
               </div>
             </div>
