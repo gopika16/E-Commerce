@@ -14,6 +14,7 @@ const MainCarousel = () => {
         infinite
     />
   )
+  
 }
 
 export default MainCarousel
