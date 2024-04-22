@@ -53,12 +53,16 @@ export default function Product() {
 
   const handleRadioFilterChange = (e, sectionId) => {
     const searchParams = new URLSearchParams(location.search);
-
-    searchParams.set(sectionId, e.target.value)
-
+  
+    // Remove the previous value
+    searchParams.delete(sectionId);
+  
+    // Add the new value
+    searchParams.set(sectionId, e.target.value);
+  
     const query = searchParams.toString();
-    navigate({search: `?${query}`});
-  }
+    navigate({ search: `?${query}` });
+  };
 
   return (
     <div className="bg-white">
@@ -290,13 +294,11 @@ export default function Product() {
                           <div className="space-y-4">
                             <FormControl>
                               <RadioGroup
+                                
                                 aria-labelledby="demo-radio-buttons-group-label"
-                                defaultValue="female"
                                 name="radio-buttons-group">
                                 {section.options.map((option, optionIdx) => (
-                                  <>
                                     <FormControlLabel onChange={(e)=>handleRadioFilterChange(e, section.id)} value={option.value} control={<Radio />} label={option.label} />
-                                  </>
                                 ))}
                               </RadioGroup>
                             </FormControl>
