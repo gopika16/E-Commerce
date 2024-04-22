@@ -292,11 +292,10 @@ export default function Product() {
                               <RadioGroup
                                 aria-labelledby="demo-radio-buttons-group-label"
                                 defaultValue="female"
-                                name="radio-buttons-group"
-                              >
+                                name="radio-buttons-group">
                                 {section.options.map((option, optionIdx) => (
                                   <>
-                                    <FormControlLabel onChange={(e)=>handleRadioFilterChange(e,section.id)} value={option.value} control={<Radio />} label={option.label} />
+                                    <FormControlLabel onChange={(e)=>handleRadioFilterChange(e, section.id)} value={option.value} control={<Radio />} label={option.label} />
                                   </>
                                 ))}
                               </RadioGroup>
@@ -312,11 +311,7 @@ export default function Product() {
               {/* Product grid */}
               <div className="lg:col-span-4 w-full">
                 <div className='flex flex-wrap justify-center bg-white py-5'>
-<<<<<<< Updated upstream
-                {men_kurta.map((item) => <ProductCard product={item}/>)}
-=======
-                  {mens_kurta.map((item) => <ProductCard product={item} />)}
->>>>>>> Stashed changes
+                  {men_kurta.map((item) => <ProductCard product={item}/>)}
                 </div>
               </div>
             </div>
