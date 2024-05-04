@@ -404,7 +404,7 @@ export default function Navigation() {
                             <MenuItem onClick={handleCloseUserMenu}>
                               Profile
                             </MenuItem>
-                            <MenuItem>My Orders</MenuItem>
+                            <MenuItem onClick={() => navigate("account/orders")}>My Orders</MenuItem>
                             <MenuItem>Logout</MenuItem>
                           </Menu>
                     </div>
