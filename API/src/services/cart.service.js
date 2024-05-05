@@ -9,3 +9,5 @@ async function createCart(user) {
         throw new Error(error.message);
     }
 } 
+
+module.exports = { createCart };
