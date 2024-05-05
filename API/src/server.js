@@ -1,6 +1,8 @@
 const app = require(".");
+const { connectDb } = require("./config/db");
 
 const PORT = 5454;
-app.listen(PORT, () => {
+app.listen(PORT, async() => {
+    await connectDb();
     console.log("API Listening on PORT : ", PORT);
 })
