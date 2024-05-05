@@ -25,7 +25,6 @@ const CustomerRouters = () => {
             <Route path='/account/orders' element={ <Orders/> }></Route>
             <Route path='/account/orders/:orderId' element={ <OrderDetail /> }></Route>
         </Routes>
-        <Cart/>
         <div>
           <Footer />
         </div>
