@@ -71,6 +71,7 @@ const getAllUsers = async () => {
     throw new Error(error.message);
   }
 };
+
 module.exports = {
   createUser,
   getUserById,

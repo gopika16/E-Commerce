@@ -8,6 +8,6 @@ async function createCart(user) {
     } catch (error) {
         throw new Error(error.message);
     }
-} 
+};
 
 module.exports = { createCart };
