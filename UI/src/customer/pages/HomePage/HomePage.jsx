@@ -13,6 +13,7 @@ const HomePage = () => {
             <ProductsCarousel data={men_kurta} sectionName = {'Men Kurta'}/>
             <ProductsCarousel data={men_jeans} sectionName= {'Men Jeans'}/>
         </div>
+        {/* <ProductDetails/> */}
     </div>
   )
 }

@@ -35,7 +35,6 @@ const OrderDetail = () => {
                         </Box>
                     </Grid>
                 </Grid>)}
-                
             </Grid>
         </div>
     )
