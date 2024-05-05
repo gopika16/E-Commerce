@@ -2,13 +2,14 @@ const userService = require("../services/user.service.js");
 const jwtProvider = require("../config/jwtProvider.js");
 const responseCode = require("../HttpResponse.js");
 const bcrypt = require("bcrypt");
+const cartService = require("../services/cart.service.js")
 
 const register = async (req, res) => {
     try {
         const user = await userService.createUser(req.body);
         const jwt = jwtProvider.generateToken(user._id);
 
-        await CartService.createCart(user);
+        await cartService.createCart(user);
 
         return res.status(responseCode.SUCCESS).send({ jwt, message: "Registration Successful !!" });
     } catch (error) {
