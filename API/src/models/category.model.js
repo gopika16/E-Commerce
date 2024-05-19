@@ -7,7 +7,7 @@ const categorySchema = new mongoose.Schema({
         maxlength: 50 
     },
     parentCategory: {
-        type: mongoose.Types.Schema.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: 'categories'
     },
     level: {
