@@ -7,7 +7,7 @@ const orderSchema = new mongoose.Schema({
     },
     orderItems: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'orderItens'
+        ref: 'orderItems'
     },
     orderDate: {
         type: Date,
@@ -63,6 +63,6 @@ const orderSchema = new mongoose.Schema({
     }
 });
 
-const Order = mongoose.Schema('orders', orderSchema);
+const Order = mongoose.model('orders', orderSchema);
 
 module.exports = Order;
