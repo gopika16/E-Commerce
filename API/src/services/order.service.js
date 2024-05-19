@@ -68,7 +68,7 @@ async function shippedOrder(orderId) {
     return await order.save();
 }
 
-async function deliveredOrder(orderId) {
+async function deliverOrder(orderId) {
     const order = await findOrderById(orderId);
     order.orderStatus = 'DELIVERED';
     return await order.save();
@@ -115,7 +115,7 @@ module.exports = {
     placeOrder,
     confirmOrder,
     shippedOrder,
-    deliveredOrder,
+    deliverOrder,
     cancelOrder,
     findOrderById,
     userOrderHistory,

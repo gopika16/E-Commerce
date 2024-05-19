@@ -18,6 +18,6 @@ async function getProductRating(productId) { //reqData
 }
 
 module.exports = {
-    createReview: createRating,
-    getAllReviews: getProductRating
+    createRating,
+    getProductRating
 }
